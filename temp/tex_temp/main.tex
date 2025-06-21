@@ -1,0 +1,31 @@
+\documentclass[12pt, a4paper, oneside, onecolumn]{article}
+
+\input{preamble.tex}
+
+% ##### Document #####
+% ####################
+\begin{document}
+% === 封面、目录页 ===
+\pagenumbering{gobble}  % 封面标题页、目录页不显示页码
+\input{cover.tex}
+\clearpage
+
+\tableofcontents
+\clearpage
+
+% === 正文 ===
+\pagenumbering{arabic}  % 正文页码从1开始
+\setcounter{page}{1}
+\input{content/content}  % 正文内容
+\clearpage
+
+% === 附录 ===
+\appendix
+\input{content/appendix}
+
+\end{document}
+
+
+
+
+
